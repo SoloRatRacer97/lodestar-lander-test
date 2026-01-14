@@ -3,7 +3,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Phone, Search, BadgeCheck, UserCheck, ArrowRight } from 'lucide-react';
+import { Phone, Rocket, Search, BadgeCheck, TrendingUp, ArrowRight } from 'lucide-react';
 
 const steps = [
   {
@@ -15,24 +15,24 @@ const steps = [
   },
   {
     number: '02',
-    title: 'Talent Search',
+    title: 'Kickoff Call',
     description:
-      'Our expert recruiters leverage our extensive network and proven sourcing strategies to identify top-tier candidates who match your requirements.',
-    icon: Search,
+      'Once aligned, we dive deeper into your requirements, define success metrics, and establish a clear timeline for your talent search.',
+    icon: Rocket,
   },
   {
     number: '03',
-    title: 'Candidate Vetting',
+    title: 'Talent Search & Vetting',
     description:
-      'We thoroughly screen and interview each candidate, verifying their skills, experience, and cultural fit before presenting them to you.',
-    icon: BadgeCheck,
+      'Our expert recruiters leverage our extensive network to identify candidates, then thoroughly screen and verify their skills, experience, and cultural fit.',
+    icon: Search,
   },
   {
     number: '04',
-    title: 'You Hire',
+    title: 'Hiring & Monitoring',
     description:
-      'Once you\'ve found the perfect match and made a hire, you pay a simple percentage of their first-year salary. No hidden fees, no surprises.',
-    icon: UserCheck,
+      'Once you\'ve hired your perfect match, we stay engaged to ensure a successful integration. Our 90-day guarantee means we\'re invested in long-term success.',
+    icon: TrendingUp,
   },
 ];
 
@@ -106,32 +106,66 @@ export default function HowItWorks() {
         </div>
 
         {/* Pricing highlight */}
-        <Card className="mt-20 gradient-navy text-white border-0 overflow-hidden relative shadow-premium rounded-[32px]">
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/15 rounded-full translate-y-1/2 -translate-x-1/3" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] bg-accent/5 rounded-full blur-3xl" />
+        <div className="mt-20 grid lg:grid-cols-3 gap-8 items-stretch">
+          {/* Main Pricing Card */}
+          <Card className="lg:col-span-2 bg-white border-2 border-accent/30 overflow-hidden relative shadow-premium rounded-[32px] hover:shadow-2xl transition-all duration-500">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-60 h-60 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/3" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-baby-blue/10 rounded-full translate-y-1/2 -translate-x-1/3" />
 
-          <CardContent className="p-10 lg:p-16 text-center relative">
-            <h3 className="text-2xl lg:text-4xl font-extrabold mb-6 tracking-tight">
-              Simple, Transparent Pricing
-            </h3>
-            <p className="text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-              We charge a percentage of the candidate&apos;s first-year salary only when you make a successful hire.
-              No upfront fees. No monthly retainers. Just results.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="text-sm font-extrabold tracking-wide px-8 py-5 h-auto gradient-accent text-foreground border-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-xl uppercase"
-            >
-              <a href="#book-call">
-                Get Your Custom Quote
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-          </CardContent>
-        </Card>
+            <CardContent className="p-10 lg:p-12 relative">
+              <Badge className="mb-6 px-6 py-2 gradient-accent text-foreground border-0 font-semibold rounded-full shadow-sm">
+                Our Pricing
+              </Badge>
+              <h3 className="text-2xl lg:text-4xl font-extrabold mb-6 tracking-tight text-foreground">
+                Transparent, Results-Based Pricing
+              </h3>
+              <p className="text-lg lg:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed">
+                <span className="font-bold text-foreground">25-35% of international hires&apos; salary</span> — only when we make a successful placement.
+              </p>
+
+              {/* Highlight Box */}
+              <div className="bg-gradient-to-r from-accent/20 to-baby-blue/10 rounded-2xl p-6 mb-8 border border-accent/20">
+                <p className="text-foreground font-bold text-lg mb-2">
+                  90-Day Replacement &amp; Refund Guarantee
+                </p>
+                <p className="text-muted-foreground">
+                  Your investment is protected. If it doesn&apos;t work out, we&apos;ll replace them or refund your deposit.
+                </p>
+              </div>
+
+              <p className="text-muted-foreground leading-relaxed">
+                No monthly retainers, no crazy upfront fees aside from a minor deposit — just results.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* CTA Card */}
+          <Card className="gradient-navy text-white border-0 overflow-hidden relative shadow-premium rounded-[32px] flex flex-col justify-center">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/15 rounded-full translate-y-1/2 -translate-x-1/3" />
+
+            <CardContent className="p-10 text-center relative flex flex-col items-center justify-center h-full">
+              <h4 className="text-xl lg:text-2xl font-bold mb-4">
+                Ready to Find Your Next Star Hire?
+              </h4>
+              <p className="text-white/70 mb-8 leading-relaxed">
+                Let&apos;s discuss your hiring needs and see how we can help.
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="text-sm font-extrabold tracking-wide px-8 py-5 h-auto gradient-accent text-foreground border-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-xl uppercase w-full"
+              >
+                <a href="#book-call">
+                  Book a Call
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
-import { Linkedin, Twitter, Mail, Phone } from 'lucide-react';
+import { Linkedin, Twitter, Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -73,24 +73,13 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:hello@lodestartalent.com"
+                  href="mailto:todd@lodestartalent.co"
                   className="text-white/70 hover:text-accent transition-colors flex items-center gap-3 font-medium"
                 >
                   <div className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center">
                     <Mail className="w-4 h-4 text-accent" />
                   </div>
-                  hello@lodestartalent.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+1234567890"
-                  className="text-white/70 hover:text-accent transition-colors flex items-center gap-3 font-medium"
-                >
-                  <div className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-accent" />
-                  </div>
-                  (123) 456-7890
+                  todd@lodestartalent.co
                 </a>
               </li>
             </ul>
@@ -103,7 +92,7 @@ export default function Footer() {
                 className="bg-white/10 hover:bg-accent hover:text-foreground text-white rounded-lg w-10 h-10 transition-all"
                 asChild
               >
-                <a href="#" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/todd-anderson-31999226b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </Button>
@@ -113,7 +102,7 @@ export default function Footer() {
                 className="bg-white/10 hover:bg-accent hover:text-foreground text-white rounded-lg w-10 h-10 transition-all"
                 asChild
               >
-                <a href="#" aria-label="Twitter">
+                <a href="https://x.com/_toddanderson" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <Twitter className="w-5 h-5" />
                 </a>
               </Button>

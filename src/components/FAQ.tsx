@@ -7,43 +7,27 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
-import { HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
-    question: "How much do you charge for your services?",
+    question: "Why choose you over other staffing agencies?",
     answer:
-      "We charge a percentage of the candidate's first-year salary, only payable when you make a successful hire. This means there's no upfront cost or risk to you. The exact percentage depends on the role level and complexity. Contact us for a personalized quote.",
+      "Unlike most agencies, we've actually done this. I scaled my own marketing company from zero to $50K/month while working part-time solely by building, training, and mentoring international teams. After proving the model in my own business, I'm now replicating it for other founders, including multi-7-figure companies where we place division leads and account executives. We bring real operational experience, not just recruiting theory.",
   },
   {
-    question: "How long does the hiring process typically take?",
+    question: "What is your money back guarantee?",
     answer:
-      "On average, we present qualified candidates within 2-4 weeks of our initial consultation. The total time to hire depends on your interview process and decision timeline, but most clients complete their hire within 4-8 weeks.",
+      "We offer two guarantees:\n\n• 90-Day Replacement Promise: If your hire isn't the right fit within 90 days, we'll replace them at no additional cost—no questions asked.\n\n• 100% Deposit Refund: If you're unsatisfied with our process or service delivery, we'll refund your entire deposit.\n\nYour investment is protected either way.",
   },
   {
-    question: "What types of roles do you fill?",
+    question: "How are their English skills?",
     answer:
-      "We specialize in mid to senior-level positions across technology, marketing, sales, operations, and executive leadership. Whether you're looking for a software engineer, VP of Marketing, or C-suite executive, we have the network and expertise to find the right fit.",
+      "All client-facing roles feature either native-level English or a subtle Spanish accent familiar to US audiences. Our division leads and senior positions maintain the same high standard of communication.",
   },
   {
-    question: "What happens if the hire doesn't work out?",
+    question: "On average, how long does the hiring process take?",
     answer:
-      "We stand behind our placements with a guarantee period. If your new hire doesn't work out within the first 90 days, we'll find you a replacement at no additional cost. Your success is our priority.",
-  },
-  {
-    question: "How do you vet candidates?",
-    answer:
-      "Our vetting process includes multiple interviews, skills assessments, reference checks, and background verification. We also evaluate culture fit based on the detailed information you provide about your company. We only present candidates we're confident will succeed.",
-  },
-  {
-    question: "What makes Lodestar Talent different from other recruiters?",
-    answer:
-      "We take a partnership approach, not a transactional one. We invest time to deeply understand your company, culture, and goals. Our performance-based pricing model means we're aligned with your success. Plus, our extensive network and proven process deliver results faster.",
-  },
-  {
-    question: "Do I have to sign a long-term contract?",
-    answer:
-      "No. We work on a success-based model without long-term commitments. You can engage us for a single hire or build an ongoing relationship. Our goal is to earn your repeat business through exceptional results.",
+      "Standard placements typically take 2-3 weeks. Basic operational roles can often be filled within 14 days. Highly specialized or executive-level positions may require additional time to ensure we find the perfect match.",
   },
 ];
 
@@ -92,13 +76,13 @@ export default function FAQ() {
             >
               <AccordionTrigger className="text-left text-lg font-bold hover:no-underline py-7 gap-5">
                 <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                    <HelpCircle className="w-6 h-6 text-foreground" />
+                  <div className="w-12 h-12 gradient-navy rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <span className="text-white font-bold text-lg">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                   <span>{faq.question}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-7 pl-[68px] text-base">
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-7 pl-[68px] text-base whitespace-pre-line">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

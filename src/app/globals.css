@@ -494,7 +494,6 @@ html {
 /* Mini blob decorations for cards */
 .card-blobs {
   position: relative;
-  overflow: hidden;
 }
 
 .card-blobs::before {

@@ -31,7 +31,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <div className="relative h-14 w-44">
+            <div className="relative h-[68px] w-56">
               <Image
                 src="/logo.png"
                 alt="Lodestar Talent"
@@ -50,7 +50,7 @@ export default function Header() {
                   <NavigationMenuItem key={item.href}>
                     <NavigationMenuLink
                       href={item.href}
-                      className="group inline-flex h-10 w-max items-center justify-center rounded-lg bg-transparent px-5 py-2 text-sm font-semibold text-foreground transition-all hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary focus:outline-none"
+                      className="group inline-flex h-10 w-max items-center justify-center rounded-lg bg-transparent px-5 py-2 text-base font-semibold text-foreground transition-all hover:bg-secondary hover:text-primary focus:bg-secondary focus:text-primary focus:outline-none"
                     >
                       {item.label}
                     </NavigationMenuLink>

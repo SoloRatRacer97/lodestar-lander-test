@@ -14,57 +14,66 @@ import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "They found us a VP of Engineering in just 3 weeks!",
+    quote: "Within days she mastered our processes and saved me 20+ hours a week.",
     content:
-      "We had been struggling to fill this critical role for months. Lodestar Talent understood exactly what we needed and delivered exceptional candidates. The hire has been transformational for our team.",
-    author: "Sarah Johnson",
-    role: "CEO",
-    company: "TechStartup Inc.",
+      "Lodestar helped me find an operations manager who completely transformed my agency. Within days she mastered our processes, fixed broken systems, and built tools that save me 20+ hours a week. Now I can focus on sales and scaling instead of being stuck in the day-to-day.",
+    author: "Noah",
+    role: "Marketing Agency Founder",
+    company: "",
     image: null,
   },
   {
-    quote: "The best recruiting experience we've ever had.",
+    quote: "I can almost guarantee you're losing leads if you're even thinking about it.",
     content:
-      "Their process is seamless and the quality of candidates is outstanding. They took the time to understand our culture and only presented candidates who were genuinely a great fit.",
-    author: "Michael Chen",
-    role: "Head of People",
-    company: "GrowthCo",
-    image: null,
-  },
-  {
-    quote: "Worth every penny. Our new hire exceeded expectations.",
-    content:
-      "The percentage-based model means they're as invested in finding the right person as we are. Our new Marketing Director has already made a huge impact in just a few months.",
-    author: "Emily Rodriguez",
+      "Just do it. I can almost guarantee you're losing leads if you're even thinking about it. Todd responds to everything immediately—and if something doesn't work out, he'll make it right. We're already talking about expanding into more VAs, and that should tell you everything.",
+    author: "Corey",
     role: "Founder",
-    company: "Creative Agency",
+    company: "Gutter Tuneup",
     image: null,
   },
   {
-    quote: "Exceptional service from start to finish.",
+    quote: "100% worth it — I'd do it again in a heartbeat.",
     content:
-      "Lodestar Talent took the time to truly understand our unique needs. They found us a CTO who not only had the technical skills but also fit perfectly with our company culture.",
-    author: "David Park",
-    role: "Co-Founder",
-    company: "InnovateTech",
+      "Working with Todd to bring on a VA was a game changer. I used to be glued to the phone and stuck doing admin after long days on the ground. Now my VA handles calls, parts orders, and CRM tasks, freeing me up to actually lead my team and grow the business.",
+    author: "Garrick",
+    role: "Home Services Business Owner",
+    company: "",
     image: null,
   },
   {
-    quote: "Game-changer for our hiring process.",
+    quote: "It feels less like hiring an employee and more like building a true partnership.",
     content:
-      "We've worked with many recruiters before, but none have delivered the quality and speed that Lodestar provides. They've become our go-to partner for all executive hires.",
-    author: "Jennifer Walsh",
-    role: "VP of Operations",
-    company: "ScaleUp Solutions",
+      "Lodestar gave me the perfect tool to scale my business. Instead of just plugging in a body, they focused on the human fit — someone who really matched my culture and long-term vision. The result has been peace of mind, better systems, and faster growth.",
+    author: "Benson",
+    role: "Real Estate Acquisitions Investor",
+    company: "",
     image: null,
   },
   {
-    quote: "They truly understand the startup ecosystem.",
+    quote: "We wouldn't be on track for our next growth season without her.",
     content:
-      "Finding talent that can thrive in a fast-paced environment is challenging. Lodestar consistently delivers candidates who hit the ground running from day one.",
-    author: "Alex Thompson",
-    role: "CEO",
-    company: "NextGen Ventures",
+      "Lodestar placed a VA who immediately lifted a huge weight off our sales pipeline. Within two weeks she was taking calls, booking estimates, and boosting our conversion rate. She's coachable, proactive, and already adding value far beyond her role.",
+    author: "Alex",
+    role: "Founder",
+    company: "Cincinnati Painting Co.",
+    image: null,
+  },
+  {
+    quote: "Their team helped us hit Q1 and Q2 goals months ahead of schedule.",
+    content:
+      "I almost hesitated to hire another team member, but working with Lodestar changed the game. Their team helped us hit Q1 and Q2 goals months ahead of schedule.",
+    author: "Corey",
+    role: "Founder",
+    company: "Clixsy",
+    image: null,
+  },
+  {
+    quote: "Got someone great on the first try. This was a no-brainer.",
+    content:
+      "Just do it. I tried hiring direct through OnlineJobs.ph and went through eight or nine people before finding one that stuck. With Todd's team, it was seamless—submitted a form, talked the same day, interviewed a shortlist, and got someone great on the first try.",
+    author: "Joe",
+    role: "Founder",
+    company: "Wislead",
     image: null,
   },
 ];
@@ -108,10 +117,10 @@ export default function WrittenTestimonials() {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-4 md:-ml-6">
+          <CarouselContent className="-ml-4 md:-ml-6 py-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full card-testimonial card-blobs hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-[28px]">
+              <CarouselItem key={index} className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/3 py-4">
+                <Card className="h-full card-testimonial card-blobs hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-[28px] overflow-visible">
                   <CardContent className="p-8 lg:p-10 relative">
                     {/* Quote icon with gradient background */}
                     <div className="mb-6 w-14 h-14 gradient-accent rounded-xl flex items-center justify-center shadow-lg">
@@ -158,7 +167,7 @@ export default function WrittenTestimonials() {
                           {testimonial.author}
                         </p>
                         <p className="text-xs text-muted-foreground font-medium">
-                          {testimonial.role}, {testimonial.company}
+                          {testimonial.role}{testimonial.company && `, ${testimonial.company}`}
                         </p>
                       </div>
                     </div>

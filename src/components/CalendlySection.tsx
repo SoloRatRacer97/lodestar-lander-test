@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Mail, Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 // Calendly URL
 const CALENDLY_URL = 'lodestar-talent/lodestar-talent-discovery-call-x';
@@ -96,24 +96,15 @@ export default function CalendlySection() {
           <p className="text-white/70 mb-8 text-lg lg:text-xl">
             Prefer to reach out directly?
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12">
+          <div className="flex justify-center items-center">
             <a
-              href="mailto:hello@lodestartalent.com"
+              href="mailto:todd@lodestartalent.co"
               className="flex items-center text-accent hover:text-white transition-all duration-300 text-lg font-semibold group"
             >
               <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-accent/30 transition-all duration-300">
                 <Mail className="w-6 h-6" />
               </div>
-              hello@lodestartalent.com
-            </a>
-            <a
-              href="tel:+1234567890"
-              className="flex items-center text-accent hover:text-white transition-all duration-300 text-lg font-semibold group"
-            >
-              <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-accent/30 transition-all duration-300">
-                <Phone className="w-6 h-6" />
-              </div>
-              (123) 456-7890
+              todd@lodestartalent.co
             </a>
           </div>
         </div>

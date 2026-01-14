@@ -6,14 +6,17 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Play, ArrowRight, X } from 'lucide-react';
 
-// Placeholder company logos - replace with actual logo paths after upload
+// Client logos
 const companyLogos = [
-  { name: 'Company 1', logo: null },
-  { name: 'Company 2', logo: null },
-  { name: 'Company 3', logo: null },
-  { name: 'Company 4', logo: null },
-  { name: 'Company 5', logo: null },
-  { name: 'Company 6', logo: null },
+  { name: 'Client 1', logo: '/Client Logos/5mJszXpHegsq5q625fC0cUabyN4.avif' },
+  { name: 'Client 2', logo: '/Client Logos/6OMMy3i9EpXjbpJRGGayXAPRyQ.avif' },
+  { name: 'Client 3', logo: '/Client Logos/FGc5ikdqVYJH5DTuarKBwgIs0g.avif' },
+  { name: 'Client 4', logo: '/Client Logos/HiBqwbUUwDdIUn5PZVPGjMvDX4.avif' },
+  { name: 'Client 5', logo: '/Client Logos/fVaf423pH6PTYbbQL11CsICDqTY.avif' },
+  { name: 'Client 6', logo: '/Client Logos/iYmBCOntYln2h7sFohEVgOgk.avif' },
+  { name: 'Client 7', logo: '/Client Logos/pVVmnExZyOvmj2ZIi6fytKjItfA.avif' },
+  { name: 'Client 8', logo: '/Client Logos/qzbiyAmDopubdszNKg06DpGb9w.avif' },
+  { name: 'Client 9', logo: '/Client Logos/u40NVzmcvg6EhtrFS0RERjA7PQ.png' },
 ];
 
 // YouTube Video ID
@@ -43,11 +46,11 @@ export default function Hero() {
       <div className="orb-glow w-[500px] h-[500px] top-0 left-1/4" />
       <div className="orb-glow w-[400px] h-[400px] bottom-0 right-1/4" style={{ animationDelay: '2s' }} />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
         <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
           {/* Badge */}
-          <Badge className="mb-8 px-6 py-2.5 text-sm font-semibold gradient-navy text-white border-0 shadow-lg rounded-full">
-            Trusted by 100+ Growing Companies
+          <Badge className="mb-6 px-6 py-2.5 text-sm font-semibold gradient-navy text-white border-0 shadow-lg rounded-full">
+            Trusted by 40+ Growing Companies
           </Badge>
 
           {/* Headline - using display font */}
@@ -144,38 +147,36 @@ export default function Hero() {
         </div>
 
         {/* Trust indicators - Revolving Logo Carousel */}
-        <div className="mt-24 animate-fade-in-up animate-delay-400">
-          <p className="text-sm text-muted-foreground mb-10 uppercase tracking-widest font-semibold text-center">
-            Trusted by companies like
-          </p>
+        {companyLogos.length > 0 && (
+          <div className="mt-24 animate-fade-in-up animate-delay-400">
+            <p className="text-sm text-muted-foreground mb-10 uppercase tracking-widest font-semibold text-center">
+              Trusted by companies like
+            </p>
 
-          {/* Carousel container */}
-          <div className="relative overflow-hidden py-4">
-            {/* Scrolling logos - duplicated for seamless loop */}
-            <div className="flex animate-scroll">
-              {[...companyLogos, ...companyLogos].map((company, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 mx-6 h-16 w-40 bg-white rounded-2xl shadow-sm border border-border/30 flex items-center justify-center hover:shadow-lg hover:border-accent/30 transition-all duration-300"
-                >
-                  {company.logo ? (
-                    <Image
-                      src={company.logo}
-                      alt={company.name}
-                      width={120}
-                      height={48}
-                      className="object-contain opacity-60 hover:opacity-100 transition-opacity"
-                    />
-                  ) : (
-                    <span className="text-muted-foreground/60 font-semibold text-sm">
-                      {company.name}
-                    </span>
-                  )}
-                </div>
-              ))}
+            {/* Carousel container */}
+            <div className="relative overflow-hidden py-4">
+              {/* Scrolling logos - duplicated for seamless loop */}
+              <div className="flex animate-scroll items-center">
+                {[...companyLogos, ...companyLogos].map((company, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 mx-8 h-12 w-32 flex items-center justify-center"
+                  >
+                    {company.logo && (
+                      <Image
+                        src={company.logo}
+                        alt={company.name}
+                        width={120}
+                        height={48}
+                        className="object-contain opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
